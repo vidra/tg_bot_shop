@@ -10,7 +10,7 @@ const token = '6136917496:AAHyI3XzIpw2wV3GrQo1BtBfZymqXqoX44Q';
 
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
-const webAppUrl = 'https://flourishing-druid-5a80da.netlify.app/';
+const webAppUrl = 'https://flourishing-druid-5a80da.netlify.app';
 
 app.use(cors());
 bot.on('message', async (msg) => {
