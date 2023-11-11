@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const port = 8080;
+const cors = require('cors');
 
 // replace the value below with the Telegram token you receive from <strong i="6">@BotFather</strong>
 const token = '6136917496:AAHyI3XzIpw2wV3GrQo1BtBfZymqXqoX44Q';
@@ -11,6 +12,7 @@ const token = '6136917496:AAHyI3XzIpw2wV3GrQo1BtBfZymqXqoX44Q';
 const bot = new TelegramBot(token, {polling: true});
 const webAppUrl = 'https://flourishing-druid-5a80da.netlify.app/';
 
+app.use(cors());
 bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
   const text = msg.text;
