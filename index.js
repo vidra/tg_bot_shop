@@ -3,7 +3,8 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const port = 8080;
-
+app.use(express.json());
+app.use(cors());
 // replace the value below with the Telegram token you receive from <strong i="6">@BotFather</strong>
 const token = '6136917496:AAHyI3XzIpw2wV3GrQo1BtBfZymqXqoX44Q';
 
