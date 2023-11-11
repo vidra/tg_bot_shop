@@ -19,7 +19,7 @@ if(text === '/start') {
   await bot.sendMessage(chatId, 'Заходи в наш магазин!',{
     reply_markup: {
       inline_keyboard: [
-        [{text: 'Сделать заказ', web_app:{url: webAppUrl}}]]
+        [{text: 'Заполнить форму', web_app:{url: webAppUrl + '/form'}}]]
     }
   })
 }
