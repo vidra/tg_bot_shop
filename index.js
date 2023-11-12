@@ -13,6 +13,8 @@ const bot = new TelegramBot(token, {polling: true});
 const webAppUrl = 'https://flourishing-druid-5a80da.netlify.app';
 
 app.use(cors());
+app.use(express.json());
+
 bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
   const text = msg.text;
