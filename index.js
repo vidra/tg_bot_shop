@@ -68,8 +68,3 @@ app.post('/web-data', async (req, res) => {
         return res.status(500).json({})
     }
 })
-
-
-app.get('/', function (req, res) {
-    res.send('the REST endpoint test run!');
-});
