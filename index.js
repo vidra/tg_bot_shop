@@ -70,5 +70,6 @@ app.post('/web-data', async (req, res) => {
 })
 
 
-
-app.listen(PORT, () => console.log('server started on PORT ' + PORT))
+app.get('/', function (req, res) {
+    res.send('the REST endpoint test run!');
+});
