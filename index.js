@@ -1,5 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 const express = require('express');
+const fs = require('fs');
+const PORT = 8080;
 const cors = require('cors');
 
 const token = '6136917496:AAHyI3XzIpw2wV3GrQo1BtBfZymqXqoX44Q';
@@ -67,6 +69,6 @@ app.post('/web-data', async (req, res) => {
     }
 })
 
-const PORT = 8080;
+
 
 app.listen(PORT, () => console.log('server started on PORT ' + PORT))
