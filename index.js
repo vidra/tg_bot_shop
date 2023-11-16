@@ -4,12 +4,9 @@ const cors = require('cors');
 
 // replace the value below with the Telegram token you receive from <strong i="6">@BotFather</strong>
 const token = '6136917496:AAHyI3XzIpw2wV3GrQo1BtBfZymqXqoX44Q';
-
-// Create a bot that uses 'polling' to fetch new updates
-const bot = new TelegramBot(token, {polling: true});
 const webAppUrl = 'https://flourishing-druid-5a80da.netlify.app';
 
-
+const bot = new TelegramBot(token, {polling: true});
 const app = express();
 
 app.use(express.json());
@@ -74,3 +71,7 @@ app.post('/web-data', async (req, res) => {
 const PORT = 8000;
 
 app.listen(PORT, () => console.log('server started on PORT ' + PORT))
+
+app.get('/', function (req, res) {
+    res.send('the REST endpoint test run!');
+});
